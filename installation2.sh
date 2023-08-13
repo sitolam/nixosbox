@@ -98,8 +98,7 @@ EOF
                         	  sudo mount /dev/$drive /run/media/$(whoami)/grub-switch
                         	  sudo cp ~/Downloads/grub-switch/bootfiles/boot.1/SWITCH.GRB /run/media/$(whoami)/grub-switch
                         	  sudo umount /dev/$drive
-                        	  sudo rmdir /run/media/$(whoami)/grub-switch
-                        	  ; break;;
+                        	  sudo rmdir /run/media/$(whoami)/grub-switch; break;;
                         No ) break;;
                     esac
                 done
