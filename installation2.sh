@@ -71,7 +71,27 @@ sleep 1
 echo "Do you want to setup grub-switch?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) cd ~/Downloads; break;;
+        Yes ) cd ~/Downloads
+              git clone https://github.com/Sitolam/grub-switch
+              cd grub-switch/1_config_scripts
+              bash CONFIGURE_GRUBswitch.sh
+              cd ./bootfiles
+              clear
+
+              echo "${bold}Now you need to choose the drive to install the grub switch (e.g. sda)${normal}"
+              lsblk
+              read -p "Drive: " drive
+              mountpoint="$(lsblk -no MOUNTPOINT /dev/$drive)"
+              echo "Are you sure you want to format /dev/$drive?"
+              select fmtyn in "Yes" "No"; do
+                    case $fmt_yn in
+                        Yes ) sudo mkfs.ext4 /dev/$drive
+                              cp ./boot.1/SWITCH.GRB /media/$(whoami)/$mountpoint/
+                              ; break;;
+                        No ) break;;
+                    esac
+                done
+                break;;
         No ) break;;
     esac
 done
