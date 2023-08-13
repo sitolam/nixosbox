@@ -212,6 +212,8 @@ in
      wmctrl
      unzip
      zip
+     p7zip
+     
   ];
 
   # Remove some gnome packages
