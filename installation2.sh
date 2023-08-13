@@ -66,6 +66,18 @@ done
 sleep 1
 clear
 
+echo "${bold}Grub switch${normal}"
+sleep 1
+echo "Do you want to setup grub-switch?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) cd ~/Downloads; break;;
+        No ) break;;
+    esac
+done
+sleep 1
+clear
+
 
 echo "${bold}Installing betterdicord${normal}"
 sleep 1
