@@ -213,6 +213,7 @@ in
      unzip
      zip
      p7zip
+     gptfdisk
      
   ];
 
