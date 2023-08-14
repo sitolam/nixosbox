@@ -37,7 +37,7 @@ with lib.hm.gvariant;
 
     "org/gnome/Console" = {
       font-scale = 1.0;
-      last-window-size = mkTuple [ 1904 1032 ];
+      last-window-size = mkTuple [ 470 252 ];
     };
 
     "org/gnome/Totem" = {
@@ -368,7 +368,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 489 512 ];
+      initial-size = mkTuple [ 470 512 ];
     };
 
     "org/gnome/nm-applet/eap/17b45eca-34d1-4428-ab9c-97c1ccb45bf7" = {
@@ -483,12 +483,6 @@ with lib.hm.gvariant;
       user-enabled = true;
     };
 
-    "org/gnome/shell/extensions/forge" = {
-      css-last-update = mkUint32 37;
-      dnd-center-layout = "tabbed";
-      window-gap-size-increment = mkUint32 1;
-    };
-
     "org/gnome/shell/extensions/gsconnect" = {
       id = "9b9d7d13-04bb-4dd2-83cb-ed0c7b7959f0";
       name = "nixosbox";
@@ -550,7 +544,7 @@ with lib.hm.gvariant;
       datemenu-remove-notifications = false;
       input-always-show = false;
       input-show-selected = false;
-      list-buttons = "[{\"name\":\"Clutter_Actor\",\"label\":null,\"visible\":true},{\"name\":\"SystemItem\",\"label\":null,\"visible\":true},{\"name\":\"OutputStreamSlider\",\"label\":null,\"visible\":false},{\"name\":\"InputStreamSlider\",\"label\":null,\"visible\":false},{\"name\":\"BrightnessItem\",\"label\":null,\"visible\":true},{\"name\":\"NMWiredToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMWirelessToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMModemToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMBluetoothToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMVpnToggle\",\"label\":null,\"visible\":true},{\"name\":\"BluetoothToggle\",\"label\":null,\"visible\":false},{\"name\":\"PowerProfilesToggle\",\"label\":null,\"visible\":false},{\"name\":\"NightLightToggle\",\"label\":\"Night Light\",\"visible\":true},{\"name\":\"DarkModeToggle\",\"label\":\"Dark Style\",\"visible\":true},{\"name\":\"RfkillToggle\",\"label\":\"Airplane Mode\",\"visible\":false},{\"name\":\"RotationToggle\",\"label\":\"Auto Rotate\",\"visible\":false},{\"name\":\"BackgroundAppsToggle\",\"label\":null,\"visible\":false},{\"name\":\"MediaSection\",\"label\":null,\"visible\":false},{\"name\":\"St_BoxLayout\",\"label\":null,\"visible\":true}]";
+      list-buttons = "[{\"name\":\"Clutter_Actor\",\"label\":null,\"visible\":true},{\"name\":\"SystemItem\",\"label\":null,\"visible\":true},{\"name\":\"OutputStreamSlider\",\"label\":null,\"visible\":true},{\"name\":\"InputStreamSlider\",\"label\":null,\"visible\":false},{\"name\":\"BrightnessItem\",\"label\":null,\"visible\":true},{\"name\":\"NMWiredToggle\",\"label\":null,\"visible\":false},{\"name\":\"NMWirelessToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMModemToggle\",\"label\":null,\"visible\":false},{\"name\":\"NMBluetoothToggle\",\"label\":null,\"visible\":false},{\"name\":\"NMVpnToggle\",\"label\":null,\"visible\":false},{\"name\":\"BluetoothToggle\",\"label\":null,\"visible\":true},{\"name\":\"PowerProfilesToggle\",\"label\":null,\"visible\":true},{\"name\":\"NightLightToggle\",\"label\":\"Night Light\",\"visible\":true},{\"name\":\"DarkModeToggle\",\"label\":\"Dark Style\",\"visible\":true},{\"name\":\"RfkillToggle\",\"label\":\"Airplane Mode\",\"visible\":true},{\"name\":\"RotationToggle\",\"label\":\"Auto Rotate\",\"visible\":false},{\"name\":\"BackgroundAppsToggle\",\"label\":\"No Background Apps\",\"visible\":false},{\"name\":\"MediaSection\",\"label\":null,\"visible\":false},{\"name\":\"St_BoxLayout\",\"label\":null,\"visible\":true}]";
       media-control-compact-mode = false;
       notifications-enabled = false;
       output-show-selected = false;
@@ -584,7 +578,7 @@ with lib.hm.gvariant;
     "org/gnome/software" = {
       check-timestamp = mkInt64 1691920867;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1691056493;
+      flatpak-purge-timestamp = mkInt64 1691930743;
     };
 
     "org/gnome/system/location" = {
