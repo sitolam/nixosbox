@@ -57,7 +57,7 @@ echo "Do you want to copy the minecraft instances? (you need the password)"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) wget https://github.com/Sitolam/nixosbox/releases/download/v1.0.0/prismlauncher.7z
-              7z x anki_plugins.7z
+              7z x prismlauncher.7z
               mkdir -p ~/.local/share/PrismLauncher
               cp -r PrismLauncher ~/.local/share; break;;
         No ) break;;
