@@ -3,7 +3,7 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 clear
-echo "${bold}Welcome to the second part of the installation of nixos${normal}"
+echo "${bold}Welcome to the second part of the installation of NixOS${normal}"
 sleep 1
 echo "You ran the first scrip installation.sh and logged back in."
 sleep 1
@@ -23,7 +23,7 @@ clear
 echo "${bold}Flatpak${normal}"
 sleep 1
 
-echo "Adding flatpak repository"
+echo "Adding Flatpak repository"
 sleep 1
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sleep 1
@@ -41,35 +41,12 @@ sleep 1
 echo "Do you want to copy the anki plugins? (you need the password)"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) wget https://github.com/Sitolam/nixosbox/releases/download/v1.0.0/anki_plugins.7z
+        Yes ) wget https://github.com/Nebilam/NixOSbox/releases/download/v1.0.0/anki_plugins.7z
               7z x anki_plugins.7z
               cp -r addons21 ~/.local/share/Anki2; break;;
         No ) break;;
     esac
 done
-sleep 1
-clear
-
-
-echo "${bold}Adding prism launcher instance${normal}"
-sleep 1
-echo "Do you want to copy the minecraft instances? (you need the password)"
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) wget https://github.com/Sitolam/nixosbox/releases/download/v1.0.0/prismlauncher.7z
-              7z x anki_plugins.7z
-              mkdir -p ~/.local/share/PrismLauncher
-              cp -r PrismLauncher ~/.local/share; break;;
-        No ) break;;
-    esac
-done
-sleep 1
-clear
-
-
-echo "${bold}Installing betterdicord${normal}"
-sleep 1
-betterdiscordctl install
 sleep 1
 clear
 
@@ -89,9 +66,9 @@ read -n 1 -s -r -p "Press any key to continue ... "
 clear
 
 echo "${bold}Here are the next steps:${normal}"
-echo "Login in firefox"
-echo "Login in bitwarden"
-echo "Add your google account in the gnome settings."
+echo "Login in Firefox"
+echo "Login in Bitwarden"
+echo "Add your Google account in the Gnome settings."
 echo "Login in all the applications"
 read -n 1 -s -r -p "Press any key to continue ... "
 clear
