@@ -77,6 +77,9 @@ in
     # virt-manager
     libvirtd.enable = true;
     docker.enable = true;
+
+    # waydroid.enable = true;
+  	# lxd.enable = true;
   };
   # Systemd
   systemd = {
@@ -210,6 +213,7 @@ in
      ncdu
      cmatrix
      wmctrl
+     fzf # search in history of commands (open terminal and press ctr + R or ctrl + T to only show session history)
      unzip
      zip
      p7zip
@@ -268,7 +272,7 @@ in
     # The list
     home.packages = with pkgs; [ 
       firefox
-      vscode
+      unstable.vscode
       flameshot
       tesseract # voor ocr
       gnome.pomodoro
@@ -286,6 +290,8 @@ in
       signal-desktop
       element-desktop
       telegram-desktop
+      discord
+      betterdiscordctl
       unstable.antimicrox
       gimp
       drawing
@@ -304,30 +310,41 @@ in
       wine-wayland
       qbittorrent
       shell-genie
-      discord
-      betterdiscordctl
       pop-launcher
       distrobox
       docker-compose
+      thefuck
+      unstable.mission-center # stable version bestaat nog niet      
 
       # Extensions
+      gnomeExtensions.another-window-session-manager
       gnomeExtensions.blur-my-shell
-      gnomeExtensions.pano
-      gnomeExtensions.nothing-to-say
-      gnomeExtensions.grand-theft-focus
-      gnomeExtensions.hue-lights
-      gnomeExtensions.espresso
-      gnomeExtensions.just-perfection
-      gnomeExtensions.openweather
-      gnomeExtensions.quick-settings-tweaker
       gnomeExtensions.desktop-cube
-      gnomeExtensions.gesture-improvements
-      gnomeExtensions.rounded-corners
+      gnomeExtensions.worksets # customised workspaces
+      gnomeExtensions.just-perfection
+      gnomeExtensions.nothing-to-say
+      gnomeExtensions.one-click-bios
+      gnomeExtensions.openweather
+      gnomeExtensions.pano
+      gnomeExtensions.quick-settings-tweaker
+      gnomeExtensions.reorder-workspaces
+      gnomeExtensions.top-bar-organizer
+      gnomeExtensions.translate-assistant
+      gnomeExtensions.custom-accent-colors # misschien niet nodig
       gnomeExtensions.dash-to-dock
-      gnomeExtensions.legacy-gtk3-theme-scheme-auto-switcher
       gnomeExtensions.gnome-40-ui-improvements
       gnomeExtensions.gsconnect
+      gnomeExtensions.legacy-gtk3-theme-scheme-auto-switcher
       gnomeExtensions.pop-shell
+      gnomeExtensions.forge
+      gnomeExtensions.removable-drive-menu
+      gnomeExtensions.user-themes # misschien niet nodig
+      gnomeExtensions.espresso 
+      gnomeExtensions.grand-theft-focus
+      gnomeExtensions.hue-lights
+      gnomeExtensions.gesture-improvements # nog bekijken
+      gnomeExtensions.rounded-corners # misschien niet nodig
+
 
       # Obs plugins
       obs-studio-plugins.obs-move-transition
@@ -344,16 +361,30 @@ in
       enable = true;
       shellAliases = {
         update="dconf dump / | dconf2nix > /etc/nixos/dconf.nix && sudo nixos-rebuild switch";
+        ask = "shell-genie ask";
+        cls = "clear";
         arch="distrobox-enter --root arch";
       };
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
       '';
-      shellInit = "disfetch\n starship init fish | source";
+      shellInit = "disfetch\n starship init fish | source\n thefuck --alias | source ";
       plugins = [
       ];
     };
 
+    # xdg
+
+    xdg.mimeApps = {
+      enable = true;
+      # default applications
+      associations.added = {
+        "inode/directory" = ["org.gnome.Nautilus.desktop"];
+      };
+      defaultApplications = {
+        "inode/directory" = ["org.gnome.Nautilus.desktop"];
+      };
+    };
     # Configs
 
     # Starship
