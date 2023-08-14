@@ -562,9 +562,6 @@ in
   # Services
   services = {
     flatpak.enable = true; # Enable flatpak
-    openssh.enable = true; # Enable the OpenSSH daemon.
-    gnome.gnome-remote-desktop.enable = true;
-    xrdp.enable = true;
     udev.extraRules = ''
     #Enable user access to keyboard using uinput event generator
     SUBSYSTEM=="misc", KERNEL=="uinput", OPTIONS+="static_node=uinput", TAG+="uaccess"
