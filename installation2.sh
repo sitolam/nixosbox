@@ -36,12 +36,12 @@ clear
 # clear
 
 
-echo "${bold}Adding anki plugins${normal}"
+echo "${bold}Adding Anki plugins${normal}"
 sleep 1
-echo "Do you want to copy the anki plugins? (you need the password)"
+echo "Do you want to copy the Anki plugins? (you need the password)"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) wget https://github.com/Nebilam/NixOSbox/releases/download/v1.0.0/anki_plugins.7z
+        Yes ) wget https://github.com/Sitolam/nixosbox/releases/download/v1.0.0/anki_plugins.7z
               7z x anki_plugins.7z
               cp -r addons21 ~/.local/share/Anki2; break;;
         No ) break;;
@@ -50,6 +50,28 @@ done
 sleep 1
 clear
 
+
+echo "${bold}Adding prism launcher instance${normal}"
+sleep 1
+echo "Do you want to copy the minecraft instances? (you need the password)"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) wget https://github.com/Sitolam/nixosbox/releases/download/v1.0.0/prismlauncher.7z
+              7z x anki_plugins.7z
+              mkdir -p ~/.local/share/PrismLauncher
+              cp -r PrismLauncher ~/.local/share; break;;
+        No ) break;;
+    esac
+done
+sleep 1
+clear
+
+
+echo "${bold}Installing betterdicord${normal}"
+sleep 1
+betterdiscordctl install
+sleep 1
+clear
 
 # echo "${bold}Grub switch${normal}"
 # sleep 1
