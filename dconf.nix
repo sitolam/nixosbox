@@ -381,12 +381,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/pomodoro/state" = {
-      timer-date = "2023-08-08T12:46:52+0000";
+      timer-date = "2023-08-13T10:00:05+0000";
       timer-elapsed = 0.0;
       timer-paused = false;
       timer-score = 0.0;
       timer-state = "null";
-      timer-state-date = "2023-08-08T12:46:52+0000";
+      timer-state-date = "2023-08-13T10:00:05+0000";
       timer-state-duration = 0.0;
     };
 
@@ -582,7 +582,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1691657757;
+      check-timestamp = mkInt64 1691920867;
       first-run = false;
       flatpak-purge-timestamp = mkInt64 1691056493;
     };
@@ -636,7 +636,7 @@ with lib.hm.gvariant;
       sort-directories-first = false;
       sort-order = "descending";
       type-format = "category";
-      window-position = mkTuple [ 35 32 ];
+      window-position = mkTuple [ 358 81 ];
       window-size = mkTuple [ 1203 902 ];
     };
 

@@ -50,6 +50,50 @@ done
 sleep 1
 clear
 
+
+# echo "${bold}Grub switch${normal}"
+# sleep 1
+# echo "Do you want to setup grub-switch?"
+# select yn in "Yes" "No"; do
+#     case $yn in
+#         Yes ) cd ~/Downloads
+#               git clone https://github.com/Sitolam/grub-switch
+#               cd grub-switch/1_config_scripts
+#               bash CONFIGURE_GRUBswitch.sh
+#               cd ../bootfiles
+#               clear
+
+#               echo "${bold}Now you need to choose the drive to install the grub switch (e.g. sda)${normal}"
+#               lsblk
+#               read -p "Drive: " drive
+#               mountpoint="$(lsblk -no MOUNTPOINT /dev/$drive)"
+#               echo "Are you sure you want to format /dev/$drive?"
+#               select fmtyn in "Yes" "No"; do
+#                     case $fmtyn in
+#                         Yes ) echo "Formatting ..."
+#                         	  sync && sudo umount $mountpoint
+#                         	  sudo gdisk /dev/$drive <<EOF
+# o
+# Y
+# w
+# Y
+# EOF
+#                         	  sudo mkfs.ext4 -L grub-switch /dev/$drive
+#                         	  sudo mkdir -p /run/media/$(whoami)/grub-switch
+#                         	  sudo mount /dev/$drive /run/media/$(whoami)/grub-switch
+#                         	  sudo cp ~/Downloads/grub-switch/bootfiles/boot.1/SWITCH.GRB /run/media/$(whoami)/grub-switch
+#                         	  sudo umount /dev/$drive
+#                         	  sudo rmdir /run/media/$(whoami)/grub-switch; break;;
+#                         No ) break;;
+#                     esac
+#                 done
+#                 break;;
+#         No ) break;;
+#     esac
+# done
+# sleep 1
+# clear
+
 echo "${bold}Setting up distrobox${normal}"
 sleep 1
 distrobox-create --root --name arch --image archlinux:latest -Y

@@ -21,17 +21,17 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   services.switcherooControl.enable = true;
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/af2d939a-2183-4ef9-80fe-725b44c84558";
+    { device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/5D13-C238";
+    { device = "/dev/disk/by-label/NIXOS-BOOT";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/8e811f2e-da0d-4763-bce5-87d1cb83a255"; }
+    [ { device = "/dev/disk/by-label/nixos-swap"; }
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
