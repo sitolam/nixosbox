@@ -218,8 +218,7 @@ in
      zip
      p7zip
      gptfdisk
-     jq
-     
+     jq  
   ];
 
   # Remove some gnome packages
