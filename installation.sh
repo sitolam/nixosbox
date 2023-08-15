@@ -104,3 +104,6 @@ sleep 2
 sudo nixos-rebuild switch
 sleep 1
 clear
+
+echo "${bold}Installation finished${normal}"
+disfetch
