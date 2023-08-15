@@ -31,6 +31,12 @@ with lib.hm.gvariant;
       use-antialiasing = true;
     };
 
+    "io/missioncenter/MissionCenter" = {
+      window-height = 1152;
+      window-selected-page = "performance-page";
+      window-width = 1904;
+    };
+
     "org/gnome/Connections" = {
       first-run = false;
     };
@@ -87,7 +93,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/app-folders/folders/5e26c920-7589-4ec0-9c94-ef598c315fb0" = {
-      apps = [ "org.gnome.Software.desktop" "org.gnome.Settings.desktop" "org.gnome.DiskUtility.desktop" "gparted.desktop" "gnome-system-monitor.desktop" "org.gnome.baobab.desktop" "htop.desktop" "org.gnome.Logs.desktop" "nvidia-settings.desktop" "nixos-manual.desktop" "fish.desktop" ];
+      apps = [ "org.gnome.Software.desktop" "org.gnome.Settings.desktop" "org.gnome.DiskUtility.desktop" "gparted.desktop" "io.missioncenter.MissionCenter.desktop" "org.gnome.baobab.desktop" "htop.desktop" "org.gnome.Logs.desktop" "nvidia-settings.desktop" "nixos-manual.desktop" "fish.desktop" "gnome-system-monitor.desktop" ];
       name = "System";
       translate = false;
     };
@@ -381,12 +387,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/pomodoro/state" = {
-      timer-date = "2023-08-13T10:00:05+0000";
+      timer-date = "2023-08-15T11:59:11+0000";
       timer-elapsed = 0.0;
       timer-paused = false;
       timer-score = 0.0;
       timer-state = "null";
-      timer-state-date = "2023-08-13T10:00:05+0000";
+      timer-state-date = "2023-08-15T11:59:11+0000";
       timer-state-duration = 0.0;
     };
 
@@ -436,7 +442,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      app-picker-layout = "[{'3e5ef503-8fc2-4cd5-8819-85a4221bc9c5': <{'position': <0>}>, '7fa2f307-291e-4051-8616-2b6c5659c344': <{'position': <1>}>, '76680af2-8ea3-4c0f-a475-9b18aaa4eccc': <{'position': <2>}>, 'ae4dac05-1ecc-4adf-a859-32bccfc2f2d3': <{'position': <3>}>, '2c4a101a-8995-44bf-8fe8-94a97084b4f9': <{'position': <4>}>, 'c0fe8b5f-b919-407a-b18a-ecd2aa2557f8': <{'position': <5>}>, '5e26c920-7589-4ec0-9c94-ef598c315fb0': <{'position': <6>}>, 'Utilities': <{'position': <7>}>}]";
+      app-picker-layout = "[{'Utilities': <{'position': <0>}>, '3e5ef503-8fc2-4cd5-8819-85a4221bc9c5': <{'position': <1>}>, '7fa2f307-291e-4051-8616-2b6c5659c344': <{'position': <2>}>, '76680af2-8ea3-4c0f-a475-9b18aaa4eccc': <{'position': <3>}>, 'ae4dac05-1ecc-4adf-a859-32bccfc2f2d3': <{'position': <4>}>, '2c4a101a-8995-44bf-8fe8-94a97084b4f9': <{'position': <5>}>, 'c0fe8b5f-b919-407a-b18a-ecd2aa2557f8': <{'position': <6>}>, '5e26c920-7589-4ec0-9c94-ef598c315fb0': <{'position': <7>}>}]";
       disable-user-extensions = false;
       disabled-extensions = [ "pop-launcher-super-key@ManeLippert" "forge@jmmaranan.com" ];
       enabled-extensions = [ "blur-my-shell@aunetx" "pop-shell@system76.com" "hue-lights@chlumskyvaclav.gmail.com" "grand-theft-focus@zalckos.github.com" "nothing-to-say@extensions.gnome.wouter.bolsterl.ee" "pano@elhan.io" "customreboot@nova1545" "drive-menu@gnome-shell-extensions.gcampax.github.com" "reboottosomething@jangberry.eu" "openweather-extension@jenslody.de" "espresso@coadmunkee.github.com" "quick-settings-tweaks@qwreey" "native-window-placement@gnome-shell-extensions.gcampax.github.com" "desktop-cube@schneegans.github.com" "gestureImprovements@gestures" "pomodoro@arun.codito.in" "Rounded_Corners@lennart-k" "dash-to-dock@micxgx.gmail.com" "legacyschemeautoswitcher@joshimukul29.gmail.com" "ssh-quick-connect@ibrokemy.computer" "gnome-ui-tune@itstime.tech" "user-theme@gnome-shell-extensions.gcampax.github.com" ];
@@ -544,7 +550,7 @@ with lib.hm.gvariant;
       datemenu-remove-notifications = false;
       input-always-show = false;
       input-show-selected = false;
-      list-buttons = "[{\"name\":\"Clutter_Actor\",\"label\":null,\"visible\":true},{\"name\":\"SystemItem\",\"label\":null,\"visible\":true},{\"name\":\"OutputStreamSlider\",\"label\":null,\"visible\":true},{\"name\":\"InputStreamSlider\",\"label\":null,\"visible\":false},{\"name\":\"BrightnessItem\",\"label\":null,\"visible\":true},{\"name\":\"NMWiredToggle\",\"label\":null,\"visible\":false},{\"name\":\"NMWirelessToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMModemToggle\",\"label\":null,\"visible\":false},{\"name\":\"NMBluetoothToggle\",\"label\":null,\"visible\":false},{\"name\":\"NMVpnToggle\",\"label\":null,\"visible\":false},{\"name\":\"BluetoothToggle\",\"label\":null,\"visible\":true},{\"name\":\"PowerProfilesToggle\",\"label\":null,\"visible\":true},{\"name\":\"NightLightToggle\",\"label\":\"Night Light\",\"visible\":true},{\"name\":\"DarkModeToggle\",\"label\":\"Dark Style\",\"visible\":true},{\"name\":\"RfkillToggle\",\"label\":\"Airplane Mode\",\"visible\":true},{\"name\":\"RotationToggle\",\"label\":\"Auto Rotate\",\"visible\":false},{\"name\":\"BackgroundAppsToggle\",\"label\":\"No Background Apps\",\"visible\":false},{\"name\":\"MediaSection\",\"label\":null,\"visible\":false},{\"name\":\"St_BoxLayout\",\"label\":null,\"visible\":true}]";
+      list-buttons = "[{\"name\":\"Clutter_Actor\",\"label\":null,\"visible\":true},{\"name\":\"SystemItem\",\"label\":null,\"visible\":true},{\"name\":\"OutputStreamSlider\",\"label\":null,\"visible\":false},{\"name\":\"InputStreamSlider\",\"label\":null,\"visible\":false},{\"name\":\"BrightnessItem\",\"label\":null,\"visible\":true},{\"name\":\"NMWiredToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMWirelessToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMModemToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMBluetoothToggle\",\"label\":null,\"visible\":true},{\"name\":\"NMVpnToggle\",\"label\":null,\"visible\":true},{\"name\":\"BluetoothToggle\",\"label\":null,\"visible\":false},{\"name\":\"PowerProfilesToggle\",\"label\":null,\"visible\":false},{\"name\":\"NightLightToggle\",\"label\":\"Night Light\",\"visible\":true},{\"name\":\"DarkModeToggle\",\"label\":\"Dark Style\",\"visible\":true},{\"name\":\"RfkillToggle\",\"label\":\"Airplane Mode\",\"visible\":false},{\"name\":\"RotationToggle\",\"label\":\"Auto Rotate\",\"visible\":false},{\"name\":\"BackgroundAppsToggle\",\"label\":null,\"visible\":false},{\"name\":\"MediaSection\",\"label\":null,\"visible\":false},{\"name\":\"St_BoxLayout\",\"label\":null,\"visible\":true}]";
       media-control-compact-mode = false;
       notifications-enabled = false;
       output-show-selected = false;
@@ -576,7 +582,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1691920867;
+      check-timestamp = mkInt64 1692100814;
       first-run = false;
       flatpak-purge-timestamp = mkInt64 1691930743;
     };
