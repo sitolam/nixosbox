@@ -218,6 +218,7 @@ in
      zip
      p7zip
      gptfdisk
+     jq
      
   ];
 

@@ -116,6 +116,25 @@ clear
 # sleep 1
 # clear
 
+echo "${bold}Install Firefox css theme${normal}"
+sleep 1
+
+# Downloads the theme
+cd ~/Downloads
+release_url=$(curl -s https://api.github.com/repos/Godiesc/firefox-one/releases/latest | jq -r '.assets[] | select(.name | contains("FirefoxONE_Release_")) | .browser_download_url')
+filename=$(basename $release_url)
+curl -LJO $release_url
+mv "$filename" FirefoxONE.zip
+unzip FirefoxONE.zip
+rm FirefoxONE.zip
+foldername="${filename%.zip}"
+
+# Copy the theme to the right location
+cd $foldername
+cp -r chrome ~/.mozilla/firefox/*.default
+cp -r user.js ~/.mozilla/firefox/*.default
+clear
+
 echo "${bold}Setting up distrobox${normal}"
 sleep 1
 distrobox-create --root --name arch --image archlinux:latest -Y
