@@ -189,6 +189,9 @@ in
     description = "${name}";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.fish;
+    openssh.autorizedKeys = [
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm4at8okUBqDBQCmoW8BCOF+B5k0GC5WfWJiK0M1oiHSE4+TgKgOduPb/CFn3YhnHFiU5pGZycYzxlELTUN+lkV93dc2HxayDC4KGGZN8V4MY61X0QtORrkLXfjQFQrY8J0SywuYo09BrBVOMPeGyjGiVvemHis/Pq6thh5e6wZDhvbAXhERAtGPwLg/rdchIYIva9R5WX4efbvEYEiMqrmauihmh+pPf5kuAWPMo7iRIDDBAHfeuX/Jv+48gOQmXVRtCPsZ7sOMLdaoHZ212fAythBSKhBP5xyYAnVKwu2/HqQ3AXpOT/TG8EhueTTtp6C4zVL7KFM7Tac5xXurey/6NQOGRnhfv6M8dOMS9Svu1hkDAiSCctQvTDo+tCG6ILSeJ8KGgIGvCopmLGHJalpnil5F+xommXDj9W/iauyPqDwdS0DQEHrR10gpH7iwbXH+ybuMUUy2IIfsKGM8G1dC9+0/ih5f9i0GEpyuQbLoSGbM8stheawYa35Olz/WT397Ft1d1qTo4J2h/0Z4fph789xP48U9o0QEO1F39tAg4H1dMKZ70MVj5t5CdL9ymp40JB+QtOjJNx+p2UApaJQCp96ENBI/dTWrx7An8k02szMwqyIDF+bo5DTnW3Bl6bPYUOXy0NZ9m5Y1jfrcwDos0jtV71VltvN1MpDnQbiw== otis.lammertyn@gmail.com"
+    ];
   };
 
   #Packages
