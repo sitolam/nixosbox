@@ -66,13 +66,6 @@ done
 sleep 1
 clear
 
-
-echo "${bold}Installing betterdicord${normal}"
-sleep 1
-betterdiscordctl install #TODO - Checkout vencord
-sleep 1
-clear
-
 # echo "${bold}Grub switch${normal}"
 # sleep 1
 # echo "Do you want to setup grub-switch?"
