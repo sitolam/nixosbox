@@ -189,8 +189,8 @@ in
     description = "${name}";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.fish;
-    openssh.autorizedKeys = [
-      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm4at8okUBqDBQCmoW8BCOF+B5k0GC5WfWJiK0M1oiHSE4+TgKgOduPb/CFn3YhnHFiU5pGZycYzxlELTUN+lkV93dc2HxayDC4KGGZN8V4MY61X0QtORrkLXfjQFQrY8J0SywuYo09BrBVOMPeGyjGiVvemHis/Pq6thh5e6wZDhvbAXhERAtGPwLg/rdchIYIva9R5WX4efbvEYEiMqrmauihmh+pPf5kuAWPMo7iRIDDBAHfeuX/Jv+48gOQmXVRtCPsZ7sOMLdaoHZ212fAythBSKhBP5xyYAnVKwu2/HqQ3AXpOT/TG8EhueTTtp6C4zVL7KFM7Tac5xXurey/6NQOGRnhfv6M8dOMS9Svu1hkDAiSCctQvTDo+tCG6ILSeJ8KGgIGvCopmLGHJalpnil5F+xommXDj9W/iauyPqDwdS0DQEHrR10gpH7iwbXH+ybuMUUy2IIfsKGM8G1dC9+0/ih5f9i0GEpyuQbLoSGbM8stheawYa35Olz/WT397Ft1d1qTo4J2h/0Z4fph789xP48U9o0QEO1F39tAg4H1dMKZ70MVj5t5CdL9ymp40JB+QtOjJNx+p2UApaJQCp96ENBI/dTWrx7An8k02szMwqyIDF+bo5DTnW3Bl6bPYUOXy0NZ9m5Y1jfrcwDos0jtV71VltvN1MpDnQbiw== otis.lammertyn@gmail.com"
+    openssh.authorizedKeys.keys = [
+      "ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDUucWQeSimbx1uTs5RgJHOk/nz7ot4gsr09B+HaoCELHdGEeyy56f3hYPEqXHzNeKwZIKO9tvKuHBfZ3UEsg5xYnmMdgladYNf8fw/schY5YIbNW8by8Dc86IzCdIX5Vn0rHz6SS/KMEmfJGxrKaIPnmsH89hGDHCoU0fqczuH0kEN5YLbgDCC42+Exh/pyEipR9DYfyzpjwaQnBUNd3zKqr750KQaRmh2CDm7Oi2D0lP9XumeAGF7YaDPA/W/GKmjdIAirzJILKEK5B2LkafpNFTvTP/6MyqprOxe1AKmY96UEhOQaGK8AwGq4k/BLSrutn9+yU0vzCWy/cOwYeheqqEe/flp5ojU3ExxXFXgam6jwdujOYpK87YAIxaP1/BVnzWaPFJOdT2V3MjwifyijOdGLvSOqNw5lxXavN7Rkg9U3xwL2x90XAK0bndNvTtZz8DdXsn3PZsZat4jU5mf38Ritqq/TxsZP3c/wfqpAScfiztJqFKaYfmgzzJ9Ob/BnmW5qDBKo1HFNAK0W/kSeyxNClypaVQh1pWFmnuvzJriZc5FpspIdeI4p2WGgOpWkCbDWD8omt2Dk+t5JWF3fvyBVB27p1EbQEBnhwvgwPrk2TA1s4ZAdJqH+8HlVhPiYrOXPVRPJdG13lebeuqqRwjb8L7R6pV8SX0Q/Z8apw== otis@nixosbox"
     ];
   };
 
@@ -556,6 +556,10 @@ in
       Exec=telegram-desktop -startintray
       Comment=Load Telegram in the background
       '';
+      "/etc/ssh/ssh-agent-config".text = ''
+      AddKeysToAgent yes
+      IdentityFile /home/${user}/.ssh/id_rsa
+      '';
       };
     # Bibata-cursor
     home.pointerCursor = 
@@ -596,7 +600,18 @@ in
   # Services
   services = {
     flatpak.enable = true; # Enable flatpak
-    openssh.enable = true;
+    openssh = {
+      enable = true;
+      settings = {
+        PasswordAuthentication = true;
+        PermitRootLogin = "no"; 
+        ChallengeResponseAuthentication = false;
+        PubkeyAuthentication = true;
+        GSSAPIAuthentication = true;
+        GSSAPICleanupCredentials = false;
+        UsePAM = true;
+      };
+    };
     udev.extraRules = ''
     #Enable user access to keyboard using uinput event generator
     SUBSYSTEM=="misc", KERNEL=="uinput", OPTIONS+="static_node=uinput", TAG+="uaccess"
