@@ -293,6 +293,9 @@ in
       unigine-valley
       virt-manager
       anki-bin
+      (discord.override {
+        withVencord = true;
+      })
       # appimagelauncher
       protonup-qt
       qpwgraph
@@ -300,7 +303,6 @@ in
       signal-desktop
       element-desktop
       telegram-desktop
-      discord
       unstable.antimicrox
       gimp
       drawing
@@ -324,7 +326,6 @@ in
       docker-compose
       thefuck
       unstable.mission-center # stable version bestaat nog niet   
-      atom   
 
       # Extensions
       gnomeExtensions.another-window-session-manager
