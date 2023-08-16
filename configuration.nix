@@ -588,6 +588,7 @@ in
           "sha256-vn+91iKXWo++4bi3m9cmdRAXFMeAqLij+SXaSChedow="
           "Bibata_Cursor";
     };
+    
   # Programs
   programs = {
     # Fish
