@@ -325,7 +325,7 @@ in
       docker-compose
       thefuck
       unstable.mission-center # stable version bestaat nog niet   
-      apostrophe   
+      atom   
 
       # Extensions
       gnomeExtensions.another-window-session-manager
