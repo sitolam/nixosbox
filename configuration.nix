@@ -280,7 +280,7 @@ in
       ];
     };
     # The list
-    home.packages = with pkgs; [ 
+    home.packages = with pkgs; [ #TODO - moosync
       firefox
       unstable.vscode
       flameshot
@@ -301,7 +301,6 @@ in
       element-desktop
       telegram-desktop
       discord
-      betterdiscordctl
       unstable.antimicrox
       gimp
       drawing
@@ -604,7 +603,7 @@ in
   # Services
   services = {
     flatpak.enable = true; # Enable flatpak
-    openssh.enable = true;
+    openssh.enable = true; #TODO - ssh web server
     udev.extraRules = ''
     #Enable user access to keyboard using uinput event generator
     SUBSYSTEM=="misc", KERNEL=="uinput", OPTIONS+="static_node=uinput", TAG+="uaccess"
