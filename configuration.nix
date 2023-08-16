@@ -48,13 +48,22 @@ in
   boot = {
   	kernelPackages = pkgs.linuxPackages_latest;
   	loader = {
-  		timeout = 5;
+  		timeout = 10;
   		grub = {
   			enable = true;
   			devices = ["nodev"];
   			efiSupport = true;
   			useOSProber = true;
   			configurationLimit = 5;
+        default = "4";
+        extraEntries = ''
+          menuentry "Reboot" {
+            reboot
+          }
+          menuentry "Poweroff" {
+            halt
+          };
+        '';
   		};
   		efi = {
   			canTouchEfiVariables = true;
