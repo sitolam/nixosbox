@@ -69,7 +69,7 @@ clear
 
 echo "${bold}Installing betterdicord${normal}"
 sleep 1
-betterdiscordctl install
+betterdiscordctl install #TODO - Checkout vencord
 sleep 1
 clear
 

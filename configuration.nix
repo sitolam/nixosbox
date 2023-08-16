@@ -93,7 +93,8 @@ in
   # Systemd
   systemd = {
     tmpfiles.rules = [
-    "L+ /run/gdm/.config/monitors.xml - - - - ${monitorsConfig}"
+    "L+ /run/gdm/.config/monitors.xml - - - - ${monitorsConfig}" 
+    # FIXME - let it work when you do not have didn't change your monitor setup.
     ];
   };
 
@@ -323,7 +324,8 @@ in
       distrobox
       docker-compose
       thefuck
-      unstable.mission-center # stable version bestaat nog niet      
+      unstable.mission-center # stable version bestaat nog niet   
+      apostrophe   
 
       # Extensions
       gnomeExtensions.another-window-session-manager
