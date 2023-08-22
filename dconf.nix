@@ -43,7 +43,11 @@ with lib.hm.gvariant;
 
     "org/gnome/Console" = {
       font-scale = 1.0;
-      last-window-size = mkTuple [ 948 512 ];
+      last-window-size = mkTuple [ 948 1032 ];
+    };
+
+    "org/gnome/TextEditor" = {
+      last-save-directory = "file:///home/otis/Downloads/AI/Audio";
     };
 
     "org/gnome/Totem" = {
@@ -72,7 +76,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "wifi";
+      last-panel = "bluetooth";
       window-state = mkTuple [ 948 1032 ];
     };
 
@@ -374,7 +378,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 948 512 ];
+      initial-size = mkTuple [ 948 1032 ];
     };
 
     "org/gnome/nm-applet/eap/17b45eca-34d1-4428-ab9c-97c1ccb45bf7" = {
@@ -387,12 +391,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/pomodoro/state" = {
-      timer-date = "2023-08-16T10:00:46+0000";
+      timer-date = "2023-08-22T11:20:16+0000";
       timer-elapsed = 0.0;
       timer-paused = false;
       timer-score = 0.0;
       timer-state = "null";
-      timer-state-date = "2023-08-16T10:00:46+0000";
+      timer-state-date = "2023-08-22T11:20:16+0000";
       timer-state-duration = 0.0;
     };
 
@@ -532,7 +536,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/pano" = {
       global-shortcut = [ "<Super>v" ];
-      show-indicator = false;
+      show-indicator = true;
     };
 
     "org/gnome/shell/extensions/pop-shell" = {
@@ -588,9 +592,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1692168020;
+      check-timestamp = mkInt64 1692703284;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1692117145;
+      flatpak-purge-timestamp = mkInt64 1692367342;
     };
 
     "org/gnome/system/location" = {

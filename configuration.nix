@@ -282,6 +282,7 @@ in
     # The list
     home.packages = with pkgs; [ #TODO - moosync
       firefox
+      brave
       unstable.vscode
       flameshot
       tesseract # voor ocr
