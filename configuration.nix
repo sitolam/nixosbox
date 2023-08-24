@@ -55,7 +55,7 @@ in
   			efiSupport = true;
   			useOSProber = true;
   			configurationLimit = 5;
-        default = "4";
+        default = "0";
         extraEntries = ''
           menuentry "Reboot" {
             reboot
@@ -282,7 +282,6 @@ in
     # The list
     home.packages = with pkgs; [ #TODO - moosync
       firefox
-      brave
       unstable.vscode
       flameshot
       tesseract # voor ocr
