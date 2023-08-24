@@ -447,7 +447,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
       binding = "<Shift><Super>w";
-      command = "grub-reboot 4 && sudo reboot";
+      command = "sudo grub-reboot 4 && sudo reboot";
       name = "Reboot to windows";
     };
 
