@@ -32,9 +32,9 @@ with lib.hm.gvariant;
     };
 
     "io/missioncenter/MissionCenter" = {
-      window-height = 1152;
-      window-selected-page = "performance-page";
-      window-width = 1904;
+      window-height = 512;
+      window-selected-page = "apps-page";
+      window-width = 948;
     };
 
     "org/gnome/Connections" = {
@@ -73,6 +73,12 @@ with lib.hm.gvariant;
       target-currency = "";
       target-units = "radian";
       word-size = 64;
+    };
+
+    "org/gnome/clocks/state/window" = {
+      maximized = false;
+      panel-id = "stopwatch";
+      size = mkTuple [ 1064 1904 ];
     };
 
     "org/gnome/control-center" = {
@@ -594,7 +600,7 @@ with lib.hm.gvariant;
     "org/gnome/software" = {
       check-timestamp = mkInt64 1692703284;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1692367342;
+      flatpak-purge-timestamp = mkInt64 1692710418;
     };
 
     "org/gnome/system/location" = {
@@ -642,7 +648,7 @@ with lib.hm.gvariant;
       show-size-column = true;
       show-type-column = true;
       sidebar-width = 165;
-      sort-column = "name";
+      sort-column = "modified";
       sort-directories-first = false;
       sort-order = "descending";
       type-format = "category";
